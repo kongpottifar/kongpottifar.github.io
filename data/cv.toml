@@ -1,0 +1,66 @@
+[personalia]
+name = "Stephan Sæbø"
+email = "stephan.saeboe@gmail.com"
+
+[skills]
+fields =  ["Biologi", "Genetikk", "Statistikk", "Matematikk", "Programmering"]
+technologies = ["Python", "R", "SQL"]
+software = ["Git", "Github", "Rstudio", "Microsoft Excel", "vim"]
+languages = ["Norsk", "Engelsk"]
+other = ["Førerkort klasse B"]
+
+[[experience]]
+start_year = 2020
+employer = "Holmenkollen dagsenter og boliger"
+job = "Miljøarbeider, deltid"
+city = "Oslo"
+
+[[experience]]
+start_year = 2017
+end_year = 2020
+employer = "Holmenkollen dagsenter og boliger"
+job = "Miljøarbeider, heltid"
+city = "Oslo"
+
+[[experience]]
+start_year = 2008
+end_year = 2017
+employer = "Holmenkollen dagsenter og boliger"
+job = "Miljøarbeider, deltid"
+city = "Oslo"
+
+[[experience]]
+start_year = 2004
+end_year = 2005
+employer = "Rikshospitalet"
+job = "Laboratorieassistent (sivilarbeider)"
+city = "Oslo"
+
+[[education]]
+start_year = 2020
+end_year = 2023
+subject = "Matematikk med informatikk (data science)"
+institute = "Universitetet i Oslo"
+city = "Oslo"
+
+[[education]]
+start_year = 2015
+end_year = 2016
+subject = "Praktisk pedagogisk utdanning (PPU)"
+institute = "Universitetet i Oslo"
+city = "Oslo"
+
+[[education]]
+start_year = 2011
+end_year = 2014
+subject = "Master of Science, Plantevitenskap"
+institute = "Norges miljø- og biovitenskapelige universitet"
+city = "Ås"
+
+[[education]]
+start_year = 2008
+end_year = 2013
+subject = "Bachelor i biologi"
+institute = "Norges miljø- og biovitenskapelige universitet"
+city = "Ås"
+

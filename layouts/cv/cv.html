@@ -1,0 +1,45 @@
+{{ partial "header.html" . }}
+
+
+<section id="content">
+  {{ .Content }}  
+</section>
+
+<section  class="cv_section" id="skills">  
+  <h2>Ferdigheter</h2>
+  <div>
+  <dl>
+    <dt>Fagområder:</dt>  
+    <dd>{{delimit $.Site.Data.cv.skills.fields ", "}}.</dd>
+
+    <dt>Programmeringsspråk:</dt>  
+    <dd>{{delimit $.Site.Data.cv.skills.technologies ", "}}.</dd>
+
+    <dt>Programvare:</dt>  
+    <dd>{{delimit $.Site.Data.cv.skills.software ", "}}.</dd>
+
+    <dt>Språk:</dt>  
+    <dd>{{delimit $.Site.Data.cv.skills.languages ", "}}.</dd>
+
+    <dt>Annet:</dt>  
+    <dd>{{delimit $.Site.Data.cv.skills.other ", "}}.</dd>
+  </dl>
+  </div>
+</section>
+
+<section class="cv_section"  id="experience">
+  <h2>Erfaring</h2>
+    {{ range $.Site.Data.cv.experience }}
+      {{ partial "experience.html" . }}
+    {{ end }}
+</section>
+
+<section class="cv_section" id="education">
+  <h2>Utdanning</h2>
+    {{ range $.Site.Data.cv.education }}
+      {{ partial "education.html" . }}
+    {{ end }}
+</section>
+
+{{ partial "footer.html" . }}
+

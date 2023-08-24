@@ -1,0 +1,15 @@
+<div class="cv_entry">
+  <div class="cv_year">
+    <p>{{ .start_year }} – {{ if isset . "end_year"}} {{ .end_year }} {{ end}}</p>
+  </div>
+  <div class="cv_title">
+    <h3>{{ .subject }}</h3>
+  </div>
+  <div class="cv_text">
+      <p>
+      <em>{{ .institute }}</em>
+      <br>
+       {{ .city }}
+      </p>
+  </div>
+</div>
