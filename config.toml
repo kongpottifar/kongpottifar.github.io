@@ -2,9 +2,6 @@ baseURL = 'https://kongpottifar.github.io/'
 languageCode = 'nb'
 title = 'Stephan Sæbø'
 
-theme = "black-and-light"
-canonifyurls = true
-
 pygmentsstyle       = "bw"
 pygmentscodefences  = true
 

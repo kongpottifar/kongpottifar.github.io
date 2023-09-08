@@ -1,7 +1,17 @@
 {{ partial "header.html" . }}
 
-<section id=content>
+<section id="content" class=" font-mono container mb-5">
   {{ .Content }}  
+</section>
+
+<section id="prosjekter" class="container mb-auto">
+  {{range .Pages}}
+  <div class="container my-3 font-mono">
+    <h2 class="font-bold text-lg mb-3 hover:underline"><a href="{{ .Permalink }}"> {{ .Title }}</a></h2>
+    <p class="mb-2">{{ .Params.Summary }}</p>
+    <a class="hover:underline" href="{{ .Params.github_url }}">Github</a>
+  <div>
+  {{end}}
 </section>
 
 {{ partial "footer.html" . }}

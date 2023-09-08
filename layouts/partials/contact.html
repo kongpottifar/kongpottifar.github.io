@@ -1,0 +1,76 @@
+<section class="mb-auto">
+<h2 class="text-xl mb-4 font-mono font-bold">Kontakt:</h2>
+<form
+  id="contact-form"
+>
+  <div class="container font-mono gap-3 grid md:grid-cols-3">
+
+    <label class="justify-self-end hover:underline" for="email">Epost:</label>
+    <input
+          class="p-1.5 border-solid border-black border-2 col-start-2 col-end-4"
+          id="email" 
+          name="Email" 
+          type="email" 
+          placeholder="din@epost.com" 
+          required>
+
+    <label class="justify-self-end hover:underline" for="name">Navn:</label>
+    <input 
+        class=" p-1.5 border-solid border-black border-2 col-start-2 col-end-4"
+        id="name"
+        name="Name"
+        type="text"
+        placeholder="Ditt Navn" 
+        required>
+
+    <label class="justify-self-end hover:underline" for="message">Melding:</label>
+    <textarea 
+        class="p-1.5 border-solid border-black border-2 col-start-2 col-end-4"
+        id="message"
+        name="Message"
+        cols=20 rows=4
+        required>
+    </textarea>
+    <button type="submit" class="px-3 py-2 border-solid border-2 border-black hover:underline">Send</button>
+  </div>
+</form>
+<div id="form_indicator" class="font-mono mt-3">
+  
+</div>
+<script>
+  const form = document.getElementById("contact-form");
+  form.addEventListener("submit", async event => {
+  event.preventDefault();
+  const data = new FormData(form);
+  const indicator = document.getElementById("form_indicator");
+
+  // console.log(Array.from(data))
+  try {
+      indicator.innerHTML = "<p>Sender melding…</p>";
+      const res = await fetch(
+        "https://script.google.com/macros/s/AKfycbwyxHv9pMxC9Wy1FMPa1zYjdESW7tWp5C0KZNyhX35rQIcpYB4rr0FnoWSb7X0CBlso0A/exec",
+        {
+          method: 'POST',
+          body: data
+        },
+      );
+
+      const resData = await res.json();
+      if (resData.result === "success") {
+         indicator.innerHTML = "<p>Takk for din interresse. Jeg tar kontakt.</p>";
+         document.getElementById("email").value=""
+         document.getElementById("name").value=""
+         document.getElementById("message").value=""
+      } else {
+        throw new Error();
+      }
+
+    } catch (err) {
+      indicator.innerHTML = "<p>Ånei. Noe gikk galt. Prøv igjen senere.;</p>";
+    }
+  });
+</script>
+</section>
+  <!-- method="POST" 
+  action="https://script.google.com/macros/s/AKfycbycFyEWcNqAXGzE1qnIvVatBtqZGoDSTy_1ECbvA3On9AZE8lBKfyIloMrXOEZBTd9D2Q/exec"
+      -->

@@ -5,7 +5,7 @@ email = "stephan.saeboe@gmail.com"
 [skills]
 fields =  ["Biologi", "Genetikk", "Statistikk", "Matematikk", "Programmering"]
 technologies = ["Python", "R", "SQL"]
-software = ["Git", "Github", "Rstudio", "Microsoft Excel", "vim"]
+software = ["Git", "Github", "Rstudio", "vim"]
 languages = ["Norsk", "Engelsk"]
 other = ["Førerkort klasse B"]
 
@@ -19,7 +19,7 @@ city = "Oslo"
 start_year = 2017
 end_year = 2020
 employer = "Holmenkollen dagsenter og boliger"
-job = "Miljøarbeider, heltid"
+job = "Miljøarbeider med primærkontaktansvar, fulltid"
 city = "Oslo"
 
 [[experience]]

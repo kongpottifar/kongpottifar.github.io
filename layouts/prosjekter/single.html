@@ -1,0 +1,12 @@
+{{ partial "header.html" . }}
+
+<section id="main">
+  <article class="font-mono">
+    <h2 class="text-2xl font-bold mb-4">{{ .Title}}<h2>
+    <div class="container prose prose-neutral prose-code:text-black">
+      {{ .Content }}
+    </div>
+  <article>
+</section>
+
+{{ partial "footer.html" . }}

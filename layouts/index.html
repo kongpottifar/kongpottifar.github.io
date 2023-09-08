@@ -1,7 +1,28 @@
 {{ partial "header.html" . }}
 
-<section id=content>
-  {{ .Content }}  
+<section
+  id="about"
+  class="
+    flex 
+    flex-col 
+    sm:flex-row
+    container
+    mx-auto
+    sm:space-x-5
+    justify-center
+    mb-auto
+  "
+>
+  <img 
+    src="{{ .Site.BaseURL }}/stephan.jpg"
+    alt="Stephan Sæbø"
+    class="w-48 mx-auto mb-8"
+  >
+  <div class="font-mono">
+    {{ .Content}}
+  <div>
 </section>
+
+{{ partial "contact.html"}}
 
 {{ partial "footer.html" . }}
