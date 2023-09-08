@@ -1,0 +1,9 @@
+<div class="container flex flex-col md:flex-row mb-2">
+  <div class="mr-4 w-28">
+    <p>{{ .start_year }} – {{ if isset . "end_year"}} {{ .end_year }} {{ end}}</p>
+  </div>
+  <div>
+    <h3 class="font-bold">{{ .employer }}</h3>
+    <p><em>{{ .job }}</em></p>
+  </div>
+</div>

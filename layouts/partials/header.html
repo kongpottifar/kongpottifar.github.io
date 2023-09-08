@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="{{ .Description | default .Site.Params.Description }}">
+
+
+    <title>
+      {{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
+      {{ if eq $url "/" }}
+        {{ .Site.Title }}
+      {{ else }}
+        {{ if .Params.heading }} {{ .Params.heading }} {{ else }} {{ .Title }} {{ end }}
+      {{ end }}
+    </title>
+    <link rel="canonical" href="{{ .Permalink }}">
+
+    {{ $style := resources.Get "style.css" }}    
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+    
+    {{ range .AlternativeOutputFormats -}}
+        {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+  </head>
+
+  <body class="bg-yellow-50">
+  <div class="container flex flex-col mx-auto px-3 max-w-2xl h-screen">
+    <section id=nav class="print:hidden container mx-auto my-8 border-solid border-2 md:border-4 border-black font-mono">
+      <div class="container mx-auto m-3 mt-5">
+        <h1 class="text-xl sm:text-3xl text-center hover:underline"><a href="/">{{ .Site.Params.sitename }}</a></h1>
+      </div>
+      <ul class="flex mb-3 gap-x-4 justify-center">
+        {{ range .Site.Menus.main }}
+          <li class="hover:underline"><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </section>

@@ -1,0 +1,13 @@
+<div class="container mb-2 flex flex-col md:flex-row">
+  <div class="mr-4 w-28">
+    <p>{{ .start_year }} – {{ if isset . "end_year"}} {{ .end_year }} {{ end}}</p>
+  </div>
+  <div>
+    <h3 class="font-bold">{{ .subject }}</h3>
+      <p>
+      <em>{{ .institute }}</em>
+      <br>
+       {{ .city }}
+      </p>
+  </div>
+</div>

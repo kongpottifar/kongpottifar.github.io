@@ -1,0 +1,20 @@
+baseURL = 'https://kongpottifar.github.io/'
+languageCode = 'nb'
+title = 'Stephan Sæbø'
+
+pygmentsstyle       = "bw"
+pygmentscodefences  = true
+
+[params]
+  sitename = "Stephan Sæbø"
+  disableWebFonts = false
+  author = "Stephan Sæbø"
+
+[[menu.main]]
+    name = "Prosjekter"
+    url  = "/prosjekter"
+
+[[menu.main]]
+    name = "CV"
+    url  = "/cv"
+
