@@ -1,5 +1,10 @@
-Liker monotype-fonter. Kan kode i python,
-R og SQL. Liker å analysere data. Liker å visualiserer data. Har jobbet 
-mange år i helse/omsorg. Baker veldig gode kanelboller.Har studert biologi,
-planter, pedagogikk, matematikk, statistikk og informatikk. Er på jakt etter en
-jobb innen utvikling og eller dataanalyse.  
+Er interessert i alt som har med data og naturfag. Liker å skrive SQL-spørringer, modellere og visualiserere.
+
+Kan:
+    
+    - Skrive SQL-spørringer.
+    - Lage python-programmer
+    - Kode statistiske modeller i R
+
+Har studert biolog, plantevitenskap, pedagogikk og matematikk med informatikk.
+
