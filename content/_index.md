@@ -2,9 +2,9 @@ Er interessert i alt som har med data og naturfag. Liker å skrive SQL-spørring
 
 Kan:
     
+    - Kode statistiske modeller i R og python
     - Skrive SQL-spørringer.
     - Lage python-programmer
-    - Kode statistiske modeller i R
 
-Har studert biolog, plantevitenskap, pedagogikk og matematikk med informatikk.
+Har studert biologi, plantevitenskap, pedagogikk og matematikk med informatikk.
 
